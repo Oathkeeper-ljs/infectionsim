@@ -10,3 +10,8 @@
 
 ## 实验结果（部分）
 见仓库中图片：part_of_results.jpg
+
+## 参考
+https://github.com/matplotlib/matplotlib/issues/6338 <br>
+
+https://gitee.com/crossin/snippet/tree/master/InfectSim <br>
