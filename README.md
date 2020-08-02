@@ -9,4 +9,4 @@
 2、即使不使用现成的病毒传播模型，我们通过设置合理的系统参数及传播逻辑，也能较为科学地对传播过程进行仿真。<br>
 
 ## 实验结果（部分）
-![](https://github.com/Oathkeeper-ljs/infectionsim/blob/master/部分实验结果表格.png)
+![](https://github.com/Oathkeeper-ljs/infectionsim/blob/master/part_of_results.png)
