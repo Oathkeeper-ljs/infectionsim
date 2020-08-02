@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from pylab import mpl
-# In[1]:
+
 
 # 设定参数
 area_size = 100                   # 区域大小
@@ -33,7 +33,7 @@ contact_rate = 0.5                # 接触比例
 alarm_num = 1000                  # 警戒人数
 cancel_time = 999                 # 解除时间
 
-# In[2]:
+
 
 
 list_total = []                  # 总人员列表
@@ -70,11 +70,11 @@ class man():                                                          # 人
         return int(ga)
 
     def random_locate(self):                                         # 随机位置
-        # 85%人分布在25%区域
-        if random.random() < 0.6:                    # 80%的人在中间
+        # 60%人分布在30%区域
+        if random.random() < 0.6:                    # 60%的人以二维正态分布在中间
             px = self.random_gauss(15)
             py = self.random_gauss(15)
-        else:                                        # 5%的人可能到中间，剩余15%到其他位置
+        else:                                        # 剩余的人随机分布在100*100的区域中
             px = random.randint(0, area_size - 1)
             py = random.randint(0, area_size - 1)
         return px, py
@@ -223,7 +223,7 @@ for i in range(num_total):
 h = list_total[0]
 h.is_infected = True
 
-# In[3]
+
 
 healthy_curve = []                                                # 健康曲线
 infection_curve = []                                              # 感染曲线
@@ -334,7 +334,7 @@ ani = animation.FuncAnimation(fig, update, frames=100, interval=100, blit=True, 
 with open("test1.html", "w") as f:
     print(ani.to_html5_video(), file=f)
 
-# In[4]:
+
 
 # 绘制曲线图
 
@@ -356,7 +356,7 @@ plt.legend(['健康', '感染', '康复', '病亡', '医院', '方舱'], prop=fo
 plt.title('显示健康人数的曲线图')
 plt.show()
 
-# In[5]:
+
 
 # 不显示健康人数的曲线图
 plt.figure(figsize=(16, 7))
@@ -372,14 +372,14 @@ plt.legend(['康复', '感染', '病亡', '医院', '方舱'], prop=font)
 plt.title('不显示健康人数的曲线图')
 plt.show()
 
-# In[6]:
+
 print('\n')
 print("患病人数：",(recovery_curve[-1] + dead_curve[-1]),"\n康复人数：",
       recovery_curve[-1],"\n死亡人数：", dead_curve[-1],"\n病死率：" ,
       '%.3f' % (dead_curve[-1]*100 / (recovery_curve[-1] + dead_curve[-1])),'%')
 print("仿真结束")
 
-# In[7]:
+
 
 # 绘制曲线动画
 
