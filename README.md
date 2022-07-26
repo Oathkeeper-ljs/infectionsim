@@ -1,17 +1,17 @@
 # infectionsim
-模拟病毒的传播并实现其可视化
+Simulate and visualize the spread of corona virus
 
-## 系统原理（思路）：
-系统中的每个人都是一个实体，通过定时更新区域内的每个人状态来仿真病毒的传播过程，统计每个人的状态来反应病毒的传播效果，并通过一定的映射规则将传播效果直接的表现在图像中，之后将多天的图像连续播放来形成病毒的传播动画演示。<br>
+## System design：
+Everyone in the system is an entity. The virus spread process is simulated by regularly updating the status of each person in the area, the status of each person is counted to reflect the spread effect of the virus, and the spread effect is directly expressed through certain mapping rules. In the image, multiple days of images are then played continuously to form an animated demonstration of the spread of the virus.<br>
 
-## 不套用现成的病毒传播模型理由
-1、虽然现有的病毒传播模型较为成熟，但相比这次疫情，采用分级救治的方法，不能很好的在现有的传播模型中有所体现，且选择模拟每个人的行为有助于统计具体的个体的状态，也能更直观地反映出传染链的建立，为后续的仿真系统可视性奠定了基础。<br>
-2、即使不使用现成的病毒传播模型，我们通过设置合理的系统参数及传播逻辑，也能较为科学地对传播过程进行仿真。<br>
+## Reasons not to apply off-the-shelf virus transmission models
+1. Although the existing virus transmission model is relatively mature, compared with this epidemic, the use of hierarchical treatment methods cannot be well reflected in the existing transmission model, and choosing to simulate the behavior of each person is helpful. Counting the status of specific individuals can also more intuitively reflect the establishment of the infection chain, laying the foundation for the visibility of the subsequent simulation system.<br>
+2. Even without using the ready-made virus propagation model, we can simulate the propagation process more scientifically by setting reasonable system parameters and propagation logic.<br>
 
-## 实验结果（部分）
-见仓库中图片：part_of_results.jpg
+## Experiment result（Part）
+Seen in the repo：part_of_results.jpg
 
-## 参考
+## Reference
 https://github.com/matplotlib/matplotlib/issues/6338 <br>
 
 https://gitee.com/crossin/snippet/tree/master/InfectSim <br>
